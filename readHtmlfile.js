@@ -1,7 +1,7 @@
 const http = require('http')
 const fs =require('fs')
 const fileContent = fs.readFileSync('template.html')
-const server = fs.createServer((req,res)=>{
+const server = http.createServer((req,res)=>{
     res.writeHead(200,{'content-type':'text/html'});
     res.end(fileContent)
 })
