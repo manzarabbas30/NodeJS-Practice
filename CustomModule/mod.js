@@ -6,4 +6,10 @@ function average(arr){
     })
     return sum/arr.length
 }
-module.exports = average
+function myname(){
+    return "Manzar Abbas"
+}
+module.exports = {
+    avg:average,
+    name: myname
+}
