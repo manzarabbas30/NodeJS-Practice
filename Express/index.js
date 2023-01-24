@@ -37,6 +37,11 @@ app.get("/contact", (req, res)=>{
     res.setHeader('Content-Type','text/html')
     res.send(contact)
 })
+app.post("/contact", (req, res)=>{
+    res.statusCode=200
+    res.setHeader('Content-Type','text/html')
+    res.send(contact)
+})
 app.get("/this", (req, res)=>{
     res.statusCode=400
     res.setHeader('Content-Type','text/html')
