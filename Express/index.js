@@ -32,7 +32,16 @@ app.get("/contact", (req, res)=>{
     res.send(contact)
 })
 
-
+app.get("/contact", (req, res)=>{
+    res.statusCode=200
+    res.setHeader('Content-Type','text/html')
+    res.send(contact)
+})
+app.get("/this", (req, res)=>{
+    res.statusCode=400
+    res.setHeader('Content-Type','text/html')
+    res.send('404 Page not found')
+})
 // const server= http.createServer((req,res)=>{
 //     url=req.url
 //     res.statusCode=200
