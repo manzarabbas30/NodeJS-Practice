@@ -1,5 +1,4 @@
 const fs =require('fs')
-const http =require('http')
 const express =require('express')
 const app = express();
 const port = 3000
@@ -10,18 +9,26 @@ let project = fs.readFileSync('project.html')
 let contact = fs.readFileSync('contact.html')
 
 app.get("/", (req, res)=>{
+    res.statusCode=200
+    res.setHeader('Content-Type','text/html')
     res.send(index)
 })
 
 app.get("/about", (req, res)=>{
+    res.statusCode=200
+    res.setHeader('Content-Type','text/html')
     res.send(about)
 })
 
 app.get("/project", (req, res)=>{
+    res.statusCode=200
+    res.setHeader('Content-Type','text/html')
     res.send(project)
 })
 
 app.get("/contact", (req, res)=>{
+    res.statusCode=200
+    res.setHeader('Content-Type','text/html')
     res.send(contact)
 })
 
