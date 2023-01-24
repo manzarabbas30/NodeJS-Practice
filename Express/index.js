@@ -26,11 +26,6 @@ app.get("/project", (req, res)=>{
     res.send(project)
 })
 
-app.get("/contact", (req, res)=>{
-    res.statusCode=200
-    res.setHeader('Content-Type','text/html')
-    res.send(contact)
-})
 
 app.get("/contact", (req, res)=>{
     res.statusCode=200
@@ -40,35 +35,14 @@ app.get("/contact", (req, res)=>{
 app.post("/contact", (req, res)=>{
     res.statusCode=200
     res.setHeader('Content-Type','text/html')
-    res.send(contact)
+    res.send('this is post request')
 })
 app.get("/this", (req, res)=>{
     res.statusCode=400
     res.setHeader('Content-Type','text/html')
     res.send('404 Page not found')
 })
-// const server= http.createServer((req,res)=>{
-//     url=req.url
-//     res.statusCode=200
-//     res.setHeader('Content-Type','text/html')
-//     if(url == '/' || url == ''){
-//         res.end(index)
-//     }
-//     else if(url == '/about'){
-//         res.end(about)
-//     }
-//     else if(url == '/project'){
-//         res.end(project)
-//     }
-//     else if(url == '/contact'){
-//         res.end(contact)
-//     }
-//     else {
-//     res.statusCode=404
 
-//         res.end(`<h1 class='text-center'>404 Not Fount</h1>`)
-//     }
-// })
 app.listen(port,hostname,()=>{
     console.log(`server is running on port http://${hostname}:${port}`)
 })
