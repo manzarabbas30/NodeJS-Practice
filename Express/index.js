@@ -1,5 +1,7 @@
 const fs =require('fs')
-const express =require('express')
+const express =require('express');
+const { application } = require('express');
+const path = require('path');
 const app = express();
 const port = 3000
 const hostname ='127.0.0.1';
@@ -7,9 +9,17 @@ let index = fs.readFileSync('index.html')
 let about = fs.readFileSync('about.html')
 let project = fs.readFileSync('project.html')
 let contact = fs.readFileSync('contact.html')
-
+//For serving static files
 app.use('/static', express.static('static'))
+//set the template engine
+app.set('View engine', 'pug')
+//set view dir
+app.set('view',path.join(__dirname,'views'))
 
+// our pub file endpoint
+app.get ("/index",(req,res)=>{
+    res.status(200).send("This is Homepage of my first express app")
+})
 
 app.get("/", (req, res)=>{
     res.statusCode=200
