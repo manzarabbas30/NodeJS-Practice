@@ -8,6 +8,9 @@ let about = fs.readFileSync('about.html')
 let project = fs.readFileSync('project.html')
 let contact = fs.readFileSync('contact.html')
 
+app.use('/static', express.static('static'))
+
+
 app.get("/", (req, res)=>{
     res.statusCode=200
     res.setHeader('Content-Type','text/html')
