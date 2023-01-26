@@ -17,8 +17,8 @@ app.set('View engine', 'pug')
 app.set('view',path.join(__dirname,'views'))
 
 // our pub file endpoint
-app.get ("/index",(req,res)=>{
-    res.status(200).render('index',{title: "Hey there", message: "this is Our first pub template"})
+app.get ("/demo",(req,res)=>{
+    res.status(200).render('demo',{title: "Hey there", message: "this is Our first pub template"})
 })
 
 app.get("/", (req, res)=>{
