@@ -12,9 +12,9 @@ let contact = fs.readFileSync('contact.html')
 //For serving static files
 app.use('/static', express.static('static'))
 //set the template engine
-app.set('View engine', 'pug')
+app.set('view engine', 'pug')
 //set view dir
-app.set('view',path.join(__dirname,'views'))
+app.set('views',path.join(__dirname,'views'))
 
 // our pub file endpoint
 app.get ("/demo",(req,res)=>{
