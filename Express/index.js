@@ -11,14 +11,15 @@ let project = fs.readFileSync('project.html')
 let contact = fs.readFileSync('contact.html')
 //For serving static files
 app.use('/static', express.static('static'))
+
 //set the template engine
 app.set('view engine', 'pug')
-//set view dir
 app.set('views',path.join(__dirname,'views'))
 
 // our pub file endpoint
-app.get ("/demo",(req,res)=>{
-    res.status(200).render('demo',{title: "Hey there", message: "this is Our first pub template"})
+app.get ("/",(req,res)=>{
+    const params= {title: "Pug Template", message: "This is our pub template"}
+    res.status(200).render('demo',params)
 })
 
 app.get("/", (req, res)=>{
