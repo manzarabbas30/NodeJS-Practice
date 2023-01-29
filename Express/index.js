@@ -1,10 +1,10 @@
-const fs =require('fs')
 const express =require('express');
-const { application } = require('express');
 const path = require('path');
 const app = express();
+const hostname ='localhost';
 const port = 3000
-const hostname ='127.0.0.1';
+const fs =require('fs')
+const { application } = require('express');
 let index = fs.readFileSync('index.html')
 let about = fs.readFileSync('about.html')
 let project = fs.readFileSync('project.html')
