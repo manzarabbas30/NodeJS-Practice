@@ -31,7 +31,7 @@ app.get ("/contact",(req,res)=>{
     res.status(200).render('contact',params)
 })
 app.get ("/this",(req,res)=>{
-    const params={title: "Pug Template", message: "This is Our pug template"}
+    const params={title: "Pug Template", message: "404 Page Not Found"}
     res.status(200).render('404',params)
 })
 

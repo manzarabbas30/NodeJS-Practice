@@ -1,0 +1,12 @@
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    footer {
+        background-color: #555;
+        color: white;
+        padding: 15px;
+    }
+    .col-sm-4 p{
+        margin: 30px;
+    }
