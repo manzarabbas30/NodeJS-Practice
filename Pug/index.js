@@ -27,7 +27,7 @@ app.get ("/project",(req,res)=>{
     res.status(200).render('project',params)
 })
 app.get ("/contact",(req,res)=>{
-    const params={title: "Contact", message: "This is Our contact"}
+    const params={title: "Contact", message: "This is Our Contact"}
     res.status(200).render('contact',params)
 })
 app.get ("/this",(req,res)=>{
