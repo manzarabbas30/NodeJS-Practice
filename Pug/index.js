@@ -15,23 +15,23 @@ app.set('views',path.join(__dirname,'views'))
 
 // our pub file endpoint
 app.get ("/",(req,res)=>{
-    const params={title: "Pug Template", message: "This is Our pug template"}
+    const params={title: "Concert", message: "This is Our Concert"}
     res.status(200).render('index',params)
 })
 app.get ("/about",(req,res)=>{
-    const params={title: "Pug Template", message: "This is Our pug template"}
+    const params={title: "About", message: "This is Our About"}
     res.status(200).render('about',params)
 })
 app.get ("/project",(req,res)=>{
-    const params={title: "Pug Template", message: "This is Our pug template"}
+    const params={title: "Project", message: "This is Our Project"}
     res.status(200).render('project',params)
 })
 app.get ("/contact",(req,res)=>{
-    const params={title: "Pug Template", message: "This is Our pug template"}
+    const params={title: "contact", message: "This is Our contact"}
     res.status(200).render('contact',params)
 })
 app.get ("/this",(req,res)=>{
-    const params={title: "Pug Template", message: "404 Page Not Found"}
+    const params={title: "404", message: "404 Page Not Found"}
     res.status(200).render('404',params)
 })
 
