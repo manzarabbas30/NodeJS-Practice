@@ -15,19 +15,19 @@ app.set('views',path.join(__dirname,'views'))
 
 // our pub file endpoint
 app.get ("/",(req,res)=>{
-    const params={title: "Concert", message: "This is Our Concert"}
+    const params={title: "Concert", message: "Concert page"}
     res.status(200).render('index',params)
 })
 app.get ("/about",(req,res)=>{
-    const params={title: "About", message: "This is Our About"}
+    const params={title: "About", message: "About page"}
     res.status(200).render('about',params)
 })
 app.get ("/project",(req,res)=>{
-    const params={title: "Project", message: "This is Our Project"}
+    const params={title: "Project", message: "Project page"}
     res.status(200).render('project',params)
 })
 app.get ("/contact",(req,res)=>{
-    const params={title: "Contact", message: "This is Our Contact"}
+    const params={title: "Contact", message: "Contact page"}
     res.status(200).render('contact',params)
 })
 app.get ("/this",(req,res)=>{
